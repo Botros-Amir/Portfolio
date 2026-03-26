@@ -17,11 +17,10 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-                "index": "src/index.html",
-
+            "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              
+              "src/_redirects",
               {
                 "glob": "**/*",
                 "input": "public"

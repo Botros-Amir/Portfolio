@@ -37,7 +37,7 @@ export class PortfolioService {
         id: 4,
         title: 'Filament Dryer Project',
         description: 'Collaborated in a team to design a filament-drying device using Autodesk Inventor, optimizing airflow and temperature control to maintain filament quality for 3D printing.',
-        tags: ['Inventor', '3D Printing', ''],
+        tags: ['Inventor', '3D Printing', 'BambuLab Studio'],
         category: 'Physical Machine',
         year: 2024,
         featured: false,
