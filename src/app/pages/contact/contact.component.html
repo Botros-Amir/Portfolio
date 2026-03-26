@@ -1,0 +1,60 @@
+<section class="page-hero">
+    <p class="eyebrow"> contact</p>
+    <h1>Let's build something<br><em>together.</em></h1>
+    <p class="hero-sub">I'm open to freelance projects, full-time roles and interesting collaborations.</p>
+</section>
+
+<div class="contact-body">
+    <div class="contact-left">
+    <div class="contact-links">
+        <a href="mailto:you@email.com" class="contact-link">
+        <span class="link-icon">✉</span>
+        <div>
+            <p class="link-label">Email</p>
+            <p class="link-value">you&#64;email.com</p>
+        </div>
+        </a>
+        <a href="https://github.com" target="_blank" class="contact-link">
+        <span class="link-icon">GH</span>
+        <div>
+            <p class="link-label">GitHub</p>
+            <p class="link-value">github.com/yourusername</p>
+        </div>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="contact-link">
+        <span class="link-icon">LI</span>
+        <div>
+            <p class="link-label">LinkedIn</p>
+            <p class="link-value">linkedin.com/in/yourusername</p>
+        </div>
+        </a>
+    </div>
+
+    <div class="response-note">
+        <span class="dot"></span>
+        <p>I typically respond within 24–48 hours.</p>
+    </div>
+    </div>
+
+    <form class="contact-form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="form.name" name="name" placeholder="Your name" required />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="form.email" name="email" placeholder="your@email.com" required />
+    </div>
+    <div class="form-group">
+        <label>Subject</label>
+        <input type="text" [(ngModel)]="form.subject" name="subject" placeholder="Project idea, job offer, etc." />
+    </div>
+    <div class="form-group">
+        <label>Message</label>
+        <textarea [(ngModel)]="form.message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+    </div>
+    <button type="submit" class="submit-btn" [disabled]="submitted()">
+        {{ submitted() ? 'Sent! I'll be in touch.' : 'Send message →' }}
+    </button>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+<!-- <app-navbar></app-navbar>
+
+<main class="main-container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <div class="footer-content">
+    <p>&copy; 2026 Your Name. Built with Angular & Passion.</p>
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer> -->
+
+
+<app-cursor-glow />
+  <app-page-loader />
+  <app-navbar />
+  <main>
+    <router-outlet />
+  </main>
+  <footer class="site-footer">
+    <p>Designed & built by <span>Botros</span> · {{ year }}</p>
+    <p class="footer-stack">Angular 21 · TypeScript · CSS</p>
+  </footer>

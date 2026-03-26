@@ -1,0 +1,38 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  
+  <h1 class="nav-logo">
+    Botros Amir
+  </h1>
+
+  <ul class="nav-links">
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+    <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+    <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+  </ul>
+
+  <a routerLink="/contact" class="nav-cta">hire me →</a>
+
+  <button 
+    class="burger" 
+    type="button"
+    [class.open]="menuOpen()" 
+    (click)="menuOpen.set(!menuOpen())"
+    [attr.aria-expanded]="menuOpen()"
+    aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  @if (menuOpen()) {
+    <div 
+      class="mobile-menu" 
+      [class.open]="true" 
+      (click)="menuOpen.set(false)"
+      transition:fade> <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/projects" routerLinkActive="active">Projects</a>
+      <a routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/experience" routerLinkActive="active">Experience</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+  }
+</nav>

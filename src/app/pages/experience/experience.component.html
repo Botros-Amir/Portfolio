@@ -1,0 +1,39 @@
+<section class="page-hero">
+    <p class="eyebrow"> experience</p>
+    <h1>Where I've <em>worked.</em></h1>
+</section>
+
+<div class="timeline">
+    <div class="timeline-item" *ngFor="let e of experience(); let i = index">
+    <div class="timeline-left">
+        <span class="period">{{ e.period }}</span>
+        <div class="timeline-line" *ngIf="i < experience().length - 1"></div>
+    </div>
+    <div class="timeline-card">
+        <div class="card-header">
+        <h3 class="role">{{ e.role }}</h3>
+        <span class="company">{{ e.company }}</span>
+        </div>
+        <p class="description">{{ e.description }}</p>
+        <div class="exp-tags">
+        <span *ngFor="let tag of e.tags">{{ tag }}</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="edu-section">
+    <p class="eyebrow"> education</p>
+    <div class="edu-card">
+    <div>
+        <h3>B.Sc. in Computer Science</h3>
+        <p>Your University Name · 2016 – 2020</p>
+    </div>
+    <span class="edu-badge">Graduate</span>
+    </div>
+</div>
+
+<div class="cv-cta">
+    <p>Want the full picture?</p>
+    <a href="/assets/cv.pdf" download class="btn-primary">Download CV →</a>
+</div>

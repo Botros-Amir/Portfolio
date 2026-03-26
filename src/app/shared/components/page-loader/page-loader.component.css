@@ -1,0 +1,19 @@
+.loader-bar {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 1px; z-index: 9999;
+    background: #a78bfa;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+.loader-bar.loading {
+    opacity: 1;
+    transform: scaleX(0.7);
+    transition: transform 2s ease;
+}
+.loader-bar.done {
+    opacity: 0;
+    transform: scaleX(1);
+    transition: transform 0.2s ease, opacity 0.3s ease 0.2s;
+}

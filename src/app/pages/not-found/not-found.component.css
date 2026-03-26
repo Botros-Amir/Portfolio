@@ -1,0 +1,22 @@
+.not-found {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 16px; text-align: center; padding: 48px;
+}
+.code {
+    font-family: 'DM Mono', monospace; font-size: 80px;
+    color: rgba(167,139,250,0.15); font-weight: 500; line-height: 1;
+    margin-bottom: 8px;
+}
+h1 {
+    font-family: 'DM Serif Display', serif; font-size: 36px;
+    font-weight: 400; color: #f0ede6;
+}
+.sub { font-size: 14px; color: rgba(232,230,223,0.35); }
+.btn-primary {
+    font-family: 'DM Mono', monospace; font-size: 13px;
+    background: #a78bfa; color: #0a0a0d; border-radius: 4px;
+    padding: 12px 24px; text-decoration: none; font-weight: 500;
+    margin-top: 16px; transition: opacity 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; }

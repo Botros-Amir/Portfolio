@@ -1,0 +1,81 @@
+.page-hero {
+    padding: 140px 48px 64px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+}
+.eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: #a78bfa; letter-spacing: 0.1em; margin-bottom: 20px;
+}
+h1 {
+    font-family: 'DM Serif Display', serif; font-size: clamp(32px, 4vw, 54px);
+    font-weight: 400; color: #f0ede6;
+}
+h1 em { font-style: italic; color: #a78bfa; }
+
+.timeline {
+    padding: 64px 48px; display: flex; flex-direction: column; gap: 0;
+}
+.timeline-item { display: grid; grid-template-columns: 180px 1fr; gap: 32px; }
+.timeline-left { display: flex; flex-direction: column; align-items: flex-end; padding-top: 4px; }
+.period {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    color: rgba(232,230,223,0.25); letter-spacing: 0.06em; white-space: nowrap;
+}
+.timeline-line {
+    flex: 1; width: 0.5px; background: rgba(255,255,255,0.06);
+    margin-top: 16px; min-height: 40px;
+}
+.timeline-card {
+    padding: 0 0 56px; border-left: 0.5px solid rgba(255,255,255,0.06);
+    padding-left: 32px; display: flex; flex-direction: column; gap: 12px;
+}
+.card-header { display: flex; flex-direction: column; gap: 4px; }
+.role { font-size: 18px; font-weight: 500; color: #f0ede6; }
+.company {
+    font-family: 'DM Mono', monospace; font-size: 12px;
+    color: #a78bfa; letter-spacing: 0.06em;
+}
+.description {
+    font-size: 14px; line-height: 1.8; color: rgba(232,230,223,0.45); font-weight: 300;
+}
+.exp-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.exp-tags span {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    color: rgba(232,230,223,0.3); border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 3px; padding: 3px 8px;
+}
+
+.edu-section {
+    padding: 0 48px 56px; border-top: 0.5px solid rgba(255,255,255,0.06); padding-top: 56px;
+}
+.edu-card {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.02); border: 0.5px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 24px 28px; margin-top: 24px;
+}
+.edu-card h3 { font-size: 16px; font-weight: 500; color: #f0ede6; margin-bottom: 6px; }
+.edu-card p { font-size: 13px; color: rgba(232,230,223,0.4); }
+.edu-badge {
+    font-family: 'DM Mono', monospace; font-size: 10px; color: #a78bfa;
+    border: 0.5px solid rgba(167,139,250,0.3); border-radius: 3px; padding: 5px 12px;
+}
+
+.cv-cta {
+    padding: 56px 48px 80px; text-align: center;
+    border-top: 0.5px solid rgba(255,255,255,0.06);
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+}
+.cv-cta p { font-size: 14px; color: rgba(232,230,223,0.35); }
+.btn-primary {
+    font-family: 'DM Mono', monospace; font-size: 13px;
+    background: #a78bfa; color: #0a0a0d; border-radius: 4px;
+    padding: 12px 24px; text-decoration: none; font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .timeline-item { grid-template-columns: 1fr; }
+    .timeline-left { align-items: flex-start; flex-direction: row; gap: 12px; }
+    .timeline-line { display: none; }
+    .timeline-card { border-left: none; padding-left: 0; }
+    .page-hero, .timeline, .edu-section, .cv-cta { padding-inline: 24px; }
+}

@@ -1,0 +1,80 @@
+<section class="hero">
+    <div class="hero-content">
+    <p class="hero-tag"> software & web developer</p>
+
+    <h1 class="hero-title">
+        Crafting <em>digital</em><br>
+        experiences that<br>
+        speak for themselves.
+    </h1>
+
+    <p class="hero-sub">
+        I build fast, scalable and beautiful web applications.<br>
+        Clean code. Thoughtful architecture. Real results.
+    </p>
+
+    <div class="hero-actions">
+        <a routerLink="/projects" class="btn-primary">View my work →</a>
+        <a routerLink="/contact" class="btn-ghost">Let's talk</a>
+    </div>
+    </div>
+
+    <div class="hero-aside">
+    <div class="availability-badge">
+        <span class="dot"></span> Available for work
+    </div>
+    <div class="stat-stack">
+        <div class="stat-item">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+        <span class="stat-num">12</span>
+        <span class="stat-label">Projects shipped</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Cups of coffee</span>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="marquee-section">
+    <div class="marquee-track">
+    <span *ngFor="let t of techStack">{{ t }}</span>
+    <span *ngFor="let t of techStack">{{ t }}</span>
+    </div>
+</section>
+
+<section class="featured-intro">
+    <p class="section-eyebrow"> selected work</p>
+    <div class="featured-cta">
+    <h2>A few things I've built</h2>
+    <a routerLink="/projects" class="btn-ghost">All projects →</a>
+    </div>
+</section>
+
+<section class="featured-grid">
+    <a routerLink="/projects" class="feat-card" *ngFor="let p of featuredProjects(); let i = index">
+    <div class="feat-card-num">0{{ i + 1 }}</div>
+    <div class="feat-card-body">
+        <div class="feat-card-cat">{{ p.category }}</div>
+        <h3 class="feat-card-title">{{ p.title }}</h3>
+        <p class="feat-card-desc">{{ p.description }}</p>
+        <div class="feat-card-tags">
+        <span *ngFor="let tag of p.tags">{{ tag }}</span>
+        </div>
+    </div>
+    <div class="feat-card-arrow">→</div>
+    </a>
+</section>
+
+<section class="home-cta">
+    <p class="section-eyebrow"> get in touch</p>
+    <h2>Have a project in mind?</h2>
+    <p>Let's talk about what we can build together.</p>
+    <a routerLink="/contact" class="btn-primary">Start a conversation →</a>
+</section>

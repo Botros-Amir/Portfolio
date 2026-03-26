@@ -1,0 +1,24 @@
+<section class="page-hero">
+    <p class="eyebrow"> skills</p>
+    <h1>Tools of the <em>trade.</em></h1>
+</section>
+
+<div class="skills-body">
+    <div class="skill-group" *ngFor="let group of skillGroups">
+    <p class="group-label">{{ group.label }}</p>
+    <div class="skill-list">
+        <div class="skill-chip"
+        *ngFor="let s of getByCategory(group.cat)"
+        [class]="s.level">
+        <span class="skill-name">{{ s.name }}</span>
+        <span class="skill-level">{{ s.level }}</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="skills-footer">
+    <p class="footer-note">
+    I'm always learning. Currently exploring: <span>Rust</span>, <span>Bun</span>, <span>Three.js</span>
+    </p>
+</div>

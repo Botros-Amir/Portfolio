@@ -1,0 +1,111 @@
+import { Injectable } from '@angular/core';
+import { Project, Skill, Experience, SocialLink } from '../models/portfolio.models';
+
+@Injectable({ providedIn: 'root' })
+export class PortfolioService {
+
+  getProjects(): Project[] {
+    return [
+      {
+        id: 1,
+        title: 'E-Commerce Platform',
+        description: 'Full-stack store with Angular front-end, Node.js API, real-time inventory updates and Stripe payment integration.',
+        tags: ['Angular', 'Node.js', 'MongoDB', 'Stripe'],
+        category: 'Web App',
+        year: 2024,
+        featured: true,
+      },
+      {
+        id: 2,
+        title: 'Real-Time Chat App',
+        description: 'Instant messaging application with rooms, file sharing and end-to-end encrypted messages.',
+        tags: ['Angular', 'Socket.io', 'Express'],
+        category: 'Web App',
+        year: 2022,
+        featured: false,
+      },
+      {
+        id: 3,
+        title: 'AI Sound Analysis Project',
+        description: 'Designed a system using Python to acquire audio data from an industrial microphone, extract frequency-domain features, and train a machine learning model to classify the operating states of an electric furnace, with a PyQt interface for real-time visualization.',
+        tags: ['Machine Learning', 'Python', 'PyQt'],
+        category: 'Industrial Software',
+        year: 2025,
+        featured: false,
+      },
+      {
+        id: 4,
+        title: 'Filament Dryer Project',
+        description: 'Collaborated in a team to design a filament-drying device using Autodesk Inventor, optimizing airflow and temperature control to maintain filament quality for 3D printing.',
+        tags: ['Inventor', '3D Printing', ''],
+        category: 'Physical Machine',
+        year: 2024,
+        featured: false,
+      },
+      {
+        id: 5,
+        title: 'Game Programming Course',
+        description: 'Collaborated in a team to develop a 2D game using C++ and the Allegro graphics library. This experience enhanced my problem solving abilities, teamwork, and focus on writing clean, efficient code.',
+        tags: ['C++'],
+        category: 'Games',
+        year: 2020,
+        featured: false,
+      },
+    ];
+  }
+
+  getSkills(): Skill[] {
+    return [
+      { name: 'Angular', category: 'frontend', level: 'expert' },
+      { name: 'TypeScript', category: 'frontend', level: 'expert' },
+      { name: 'RxJS', category: 'frontend', level: 'expert' },
+      { name: 'HTML / CSS', category: 'frontend', level: 'expert' },
+      { name: 'JavaScript', category: 'frontend', level: 'expert' },
+      { name: 'SCSS / Tailwind', category: 'frontend', level: 'proficient' },
+      { name: 'Node.js', category: 'backend', level: 'proficient' },
+      { name: 'Express.js', category: 'backend', level: 'proficient' },
+      { name: 'REST APIs', category: 'backend', level: 'expert' },
+      { name: 'PostgreSQL', category: 'backend', level: 'proficient' },
+      { name: 'MongoDB', category: 'backend', level: 'proficient' },
+      { name: 'Firebase', category: 'backend', level: 'proficient' },
+      { name: 'Git / GitHub', category: 'tools', level: 'expert' },
+      { name: 'Docker', category: 'tools', level: 'proficient' },
+      { name: 'Figma', category: 'tools', level: 'familiar' },
+      { name: 'Jest / Karma', category: 'tools', level: 'proficient' },
+    ];
+  }
+
+  getExperience(): Experience[] {
+    return [
+      {
+        company: 'Tech Startup XYZ',
+        role: 'Senior Frontend Developer',
+        period: '2023 – Present',
+        description: 'Lead Angular developer on a SaaS product serving 10k+ users. Architected a micro-frontend system, reduced bundle size by 40% and mentored junior developers.',
+        tags: ['Angular', 'TypeScript', 'RxJS', 'Micro-frontend'],
+      },
+      {
+        company: 'Digital Agency ABC',
+        role: 'Full-Stack Developer',
+        period: '2021 – 2023',
+        description: 'Delivered 15+ client web applications using Angular and Node.js. Collaborated closely with designers and worked in Agile sprints.',
+        tags: ['Angular', 'Node.js', 'PostgreSQL', 'Agile'],
+      },
+      {
+        company: 'Freelance',
+        role: 'Web Developer',
+        period: '2019 – 2021',
+        description: 'Designed and developed custom websites and web apps for small businesses. Handled everything from UX design to deployment.',
+        tags: ['Angular', 'WordPress', 'HTML/CSS', 'JS'],
+      },
+    ];
+  }
+
+  getSocialLinks(): SocialLink[] {
+    return [
+      { label: 'GitHub', url: 'https://github.com', icon: 'gh' },
+      { label: 'LinkedIn', url: 'https://linkedin.com', icon: 'li' },
+      { label: 'Email', url: 'mailto:you@email.com', icon: 'em' },
+    ];
+  }
+}
