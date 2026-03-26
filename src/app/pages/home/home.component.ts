@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
   featuredProjects = signal<any[]>([]);
 
   techStack = [
-    'Angular', '·', 'TypeScript', '·', 'RxJS', '·', 'Node.js', '·',
-    'PostgreSQL', '·', 'MongoDB', '·', 'Docker', '·', 'REST APIs', '·',
-    'Git', '·', 'Firebase', '·', 'SCSS', '·', 'Jest', '·',
+    'Angular', '·', 'TypeScript', '·', 'Machine Learning', '·', 'PyQt', '·',
+    'Python', '·', 'C++', '·', 'Java', '·', 'APIs', '·',
+    'Git', '·', 'Video Editing', '·', 'Html', '·', 'CSS', '·',
   ];
 
   ngOnInit() {
